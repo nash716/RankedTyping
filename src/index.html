@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RankedTyping</title>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/questions.js"></script>
+		<script src="js/Game.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="gradient"></div>
+
+		<div id="start">
+			<div class="big">RankedTyping</div>
+			<div class="button" id="start-button">Start!</div>
+			<div id="rule">
+				<b>ルール</b><br>
+				1. ボタンを押すとゲームが始まります。制限時間は60秒です。<br>
+				2. 表示された人名を入力して Enter キーを押してください。<br>
+				3. 人によって得られるポイントが違います。<br>
+				4. 正解するとポイント分だけ制限時間が増加、間違えると減少します。<br>
+				5. 最後に今回の結果と、Wikipedia リンクが表示されます。
+			</div>
+		</div>
+		<div id="game">
+			<div id="header">
+				<div id="countdown"></div>
+				<div id="earned-point"></div>
+			</div>
+			<div id="current-target"></div>
+			<div class="point">
+				<span id="current-point"></span>
+				<span class="pt">pt</span>
+			</div>
+			<input type="text" id="answer">
+			<div>
+				<span class="next">Next: </span>
+				<span id="next-target"></span>
+			</div>
+			<div class="point">
+				<span id="next-point"></span>
+				<span class="pt">pt</span>
+			</div>
+		</div>
+		<div id="result">
+			<div class="big">Game Over!</div>
+			<div class="point"><span id="final-point"></span><span class="pt">pt</span></div>
+			<div class="button" id="retry-button">Retry!</div>
+			<div class="button" id="tweet-button">Tweet!</div>
+			<div id="history"></div>
+		</div>
+	</body>
+</html>
